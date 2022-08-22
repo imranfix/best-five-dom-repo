@@ -2,19 +2,24 @@ const cartArry = [];
 
 function display(cartPlayer){
     // console.log(cartPlayer);
-    const tableBody = document.getElementById('test');
+    const playerBody = document.getElementById('test');
+    playerBody.innerText = '';
 
     for(let i = 0; i<cartPlayer.length; i++){
-        const name = cartArry[i].playerName;
+        const name = cartArry[i].innerText;
+       
      
      }
-  
-     const h3 = document.createElement('h3');
-     h3.innerHTML = `
-              <li>levan</li>
-             `;
+
      
-     tableBody.appendChild(h3);
+  
+     const ol = document.createElement('ol');
+
+     ol.innerHTML = `
+              <li>messi</li>
+             `; 
+          
+     playerBody.appendChild(ol);
 
 }
 
