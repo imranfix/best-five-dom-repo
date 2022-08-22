@@ -59,6 +59,8 @@
           </div>
         </div>
 
+        <!-- selected-v  section
+        ------------------------ -->
         <div class="col-3">
           <div class="card h-100 bg-black text-white">
             <div class="card-body">
@@ -99,27 +101,33 @@
           </div>
         </div>
 
+        <!---- Budget section------
+        ---------------------- -->
         <div class="col-3">
           <div class="card h-100 bg-black">
             <div class="card-body">
               <h3 class="card-title text-white text-center mb-4">Budget</h3>
-              <h6 class="text-white mb-2">Per Player <input class="w-50" type="text" placeholder="" name=""></h6>
+              <h6 class="text-white ">Per Player <input id="player-amount" class="w-50" type="text" placeholder="" name=""></h6>
                
         <div>
-                <h6 class="text-white mb-3">Player Expenses: <span id="save-amount">00</span></h6>
-                <button type="button" class="btn btn-primary px-5 btn-sm mb-3">Calculate<button>
+                <button id="btn-calculate" type="button" class="btn btn-primary px-5 btn-sm mb-2">Calculate</button>
+
+             <h6 class="text-white">Expenses: <span class="ms-auto w-50" id="total-amount">00<span></h6>       
            </div>
 
         <div>
-              <h6 class="text-white mb-3">Manager <input class="w-50" type="text" type=""     name=""></h6>
+              <h6 class="text-white mt-3 mb-3">Manager <input id="manager-amount" class="w-50" type="text" type="" name=""></h6>
           </div>
             
           <div>
-              <h6 class="text-white mb-2">Coach <input class="w-50" type="text" type="" name=""></h6>
+              <h6 class="text-white mb-2">Coach <input id="coach-amount" class="w-50" type="text" type="" name=""></h6>
+
+              
            </div>
             
               
-              <button type="button" class="btn btn-primary px-5 btn-sm mt-3">Calculate Total</button>
+              <button type="button" class="btn btn-primary px-5 btn-sm mt-2">Calculate Total</button>
+              <h6 class="text-white mt-3 ms-1">Total:<span class="ms-3" id="total-amount">00</span></h6>
             </div>
           </div>
         </div>
