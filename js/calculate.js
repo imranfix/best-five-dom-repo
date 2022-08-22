@@ -1,4 +1,4 @@
-// common funcition for input field::
+// common funcition for input field:::
 function getInputFieldValueById (inputId){
 
     const inputField = document.getElementById(inputId);
@@ -9,7 +9,7 @@ function getInputFieldValueById (inputId){
 }
 
 
-// common function for text field::
+// common function for text field:::
      function getTextElementValueById(elementId){
     const textElement = document.getElementById(elementId);
     const textElementAmountString = textElement.innerText;
@@ -38,15 +38,14 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
 
 // calcualate total player:::
  const playerManagerCoachTotal = getTextElementValueById('total-amount');
- 
-    const totalPlayerCost = perPlayerAmount * 6;
+    
+    const totalPlayerCost = perPlayerAmount * 5 ;
     setTextElementValueById('total-amount', totalPlayerCost);
     return totalPlayerCost;
 })
 
 
-// // add (Second) event handler for (Calculate-Total) button:::
-
+// add (Second) event handler for (Calculate-Total) button:::
 
 document.getElementById('btn-calculate-total').addEventListener('click', function(){
 

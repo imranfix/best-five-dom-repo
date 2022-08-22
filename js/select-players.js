@@ -1,9 +1,10 @@
-const cartArry = [];
+    // push an object inside a new array:::
+    const cartArry = [];
 
  function display(cartPlayer){
      console.log(cartPlayer);
-     const tableBody = document.getElementById('cart-products');
-     tableBody.innerHTML = '';
+     const playerBody = document.getElementById('cart-products');
+     playerBody.innerHTML = '';
      for(let i = 0; i < cartPlayer.length; i++){
          // const name = cartArry[i].innerText;
          // console.log(cartPlayer[i].playerName);
@@ -15,8 +16,8 @@ const cartArry = [];
          <th>${i + 1}</th>
          <td>${name}</td>          
          `;
-     tableBody.appendChild(tr);
-        
+         playerBody.appendChild(tr);
+
       }
 
     }
@@ -24,7 +25,7 @@ const cartArry = [];
 
 // get array object and push that array::
 
-function addToCart(element){
+    function addToCart(element){
     const playerName = element.parentNode.children[1].innerText;
    
     const playerObject = {
