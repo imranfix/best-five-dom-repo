@@ -4,6 +4,7 @@ function getInputFieldValueById (inputId){
     const inputField = document.getElementById(inputId);
     const inputFieldAmountString = inputField.value;
     const inputFieldAmount = parseFloat(inputFieldAmountString);
+        inputField.value = '';
         return inputFieldAmount;
 }
 
