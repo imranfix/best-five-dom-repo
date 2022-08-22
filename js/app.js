@@ -24,7 +24,7 @@ function setTextElementValueById (elementId, newValue){
 }
 
 
-// add event handler for Calculate button:::
+// add (First) event handler for (Calculate) button:::
 
 document.getElementById('btn-calculate').addEventListener('click', function(){
 
@@ -40,7 +40,20 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
  
     const totalPlayerCost = perPlayerAmount * 6;
     setTextElementValueById('total-amount', totalPlayerCost);
-    
+    return totalPlayerCost;
+})
 
 
+// // add (Second) event handler for (Calculate-Total) button:::
+
+
+document.getElementById('btn-calculate-total').addEventListener('click', function(){
+
+    const managerAmount = getInputFieldValueById('manager-amount');
+    const coachAmount = getInputFieldValueById('coach-amount');
+    const totalPlayerCost = getTextElementValueById('total-amount');
+    const lastTotalAmount = getTextElementValueById('last-total');
+  
+    const totalCostAmount = totalPlayerCost + managerAmount + coachAmount;
+    setTextElementValueById('last-total', totalCostAmount);
 })
