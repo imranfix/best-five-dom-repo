@@ -5,7 +5,12 @@
 
 body{
     background-color: rgba(0, 0, 0, 0.726);
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+    font-family: 'Poppins', sans-serif;
+
 }
+
 header{
     background-image: url(image/LionelMessiBarcelona-5898d9fe3df78caebca7ac0d.jpg);
     background-repeat: no-repeat;
@@ -15,5 +20,34 @@ header{
     height: 700px;
     opacity: 0.8;
 
+}
+
+h5{
+   font-size: 25px; 
+   padding-left: 20px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+
+
+/* media query */
+
+/* tablet devices */
+@media(min-width: 576px){
+
+    .px-sm-3 {
+        padding-right: 0rem!important;
+        padding-left: 0rem!important;
+    
+    }
+
+    .px-sm-4 {
+        padding-right: 0.5rem!important;
+        padding-left: 0.5rem!important;
+    }
+    
 }
 
