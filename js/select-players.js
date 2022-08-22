@@ -1,29 +1,26 @@
 const cartArry = [];
 
-function display(cartPlayer){
-    // console.log(cartPlayer);
-    const playerBody = document.getElementById('test');
-    playerBody.innerText = '';
+ function display(cartPlayer){
+     console.log(cartPlayer);
+     const tableBody = document.getElementById('cart-products');
+     tableBody.innerHTML = '';
+     for(let i = 0; i < cartPlayer.length; i++){
+         // const name = cartArry[i].innerText;
+         // console.log(cartPlayer[i].playerName);
+         const name = cartArry[i].playerName
 
-    for(let i = 0; i<cartPlayer.length; i++){
-        const name = cartArry[i].innerText;
-       
-     
-     }
 
-     
+         const tr = document.createElement('tr')
+         tr.innerHTML = `
+         <th>${i + 1}</th>
+         <td>${name}</td>          
+         `;
+     tableBody.appendChild(tr);
+        
+      }
+
+    }
   
-     const ol = document.createElement('ol');
-
-     ol.innerHTML = `
-              <li>messi</li>
-             `; 
-          
-     playerBody.appendChild(ol);
-
-}
-
-
 
 // get array object and push that array::
 
@@ -32,11 +29,12 @@ function addToCart(element){
    
     const playerObject = {
         playerName: playerName,
+       
     }
  
     cartArry.push(playerObject);
+    document.getElementById('total-added-player').innerText = cartArry.length;
 
-    document.getElementById('test').innerText = cartArry;
-    display (cartArry);
+     display (cartArry);
 
-}
+    }
