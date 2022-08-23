@@ -15,8 +15,8 @@ function display(cartPlayer){
             console.log('ok');   
         }
         else{
-            alert('You can select only 5 players.');
-            break;
+            alert(' Warning! You can not select more than 5 because budget is too short to buy players.');
+            //  break;
         }
 
 
@@ -29,14 +29,14 @@ function display(cartPlayer){
         playerBody.appendChild(tr);
 
       }
-
+   
     }
   
 
 // get array object and push that array::
 
     function addToCart(element){
-// Select button disable click:::
+// Select button when clicked disable:::
     element.disabled = true;
 
     const playerName = element.parentNode.children[1].innerText;
@@ -46,7 +46,9 @@ function display(cartPlayer){
  
     cartArry.push(playerObject);
     document.getElementById('total-added-player').innerText = cartArry.length;
-
+   
     display (cartArry);
 
     }
+    
+

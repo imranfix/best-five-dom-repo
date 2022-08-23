@@ -39,6 +39,7 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
 // calcualate total player:::
  const playerManagerCoachTotal = getTextElementValueById('total-amount');
 
+    // select player number variable id for click select:  
     const cartArryLength = document.getElementById('total-added-player');
     const selectPlayerNumberString = cartArryLength.innerText;
     const selectPlayerNumber = parseInt(selectPlayerNumberString);
