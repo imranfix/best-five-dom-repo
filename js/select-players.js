@@ -25,8 +25,9 @@ function display(cartPlayer){
          <th>${i + 1}</th>
          <td>${name}</td>          
          `;
+         
         playerBody.appendChild(tr);
-       
+
       }
 
     }

@@ -38,8 +38,12 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
 
 // calcualate total player:::
  const playerManagerCoachTotal = getTextElementValueById('total-amount');
-    
-    const totalPlayerCost = perPlayerAmount * 5 ;
+
+    const cartArryLength = document.getElementById('total-added-player');
+    const selectPlayerNumberString = cartArryLength.innerText;
+    const selectPlayerNumber = parseInt(selectPlayerNumberString);
+
+    const totalPlayerCost = perPlayerAmount * selectPlayerNumber;
     setTextElementValueById('total-amount', totalPlayerCost);
     return totalPlayerCost;
 })
