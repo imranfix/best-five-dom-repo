@@ -35,16 +35,17 @@ function display(cartPlayer){
 // get array object and push that array::
 
     function addToCart(element){
+// Select button disable click:::
+    element.disabled = true;
+
     const playerName = element.parentNode.children[1].innerText;
-   
     const playerObject = {
         playerName: playerName,
-       
-    }
+       }
  
     cartArry.push(playerObject);
     document.getElementById('total-added-player').innerText = cartArry.length;
 
-     display (cartArry);
+    display (cartArry);
 
     }
