@@ -29,7 +29,7 @@ function display(cartPlayer){
         playerBody.appendChild(tr);
 
       }
-   
+    
     }
   
 
@@ -46,7 +46,7 @@ function display(cartPlayer){
  
     cartArry.push(playerObject);
     document.getElementById('total-added-player').innerText = cartArry.length;
-   
+       
     display (cartArry);
 
     }
