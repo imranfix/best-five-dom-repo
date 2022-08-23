@@ -46,6 +46,12 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
 
     const totalPlayerCost = perPlayerAmount * selectPlayerNumber;
     setTextElementValueById('total-amount', totalPlayerCost);
+
+    // extra=> give input number and you can't give text input: 
+    if(isNaN(perPlayerAmount)){
+        alert('Put only number input in this input field')
+        return perPlayerAmount;
+    }
     return totalPlayerCost;
 })
 
@@ -61,4 +67,10 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
   
     const totalCostAmount = totalPlayerCost + managerAmount + coachAmount;
     setTextElementValueById('last-total', totalCostAmount);
+
+    // extra=> give input number and you can't give text input: 
+    if(isNaN(managerAmount, coachAmount)){
+        alert('Put only number input in this input field')
+        return managerAmount, coachAmount;
+    }
 })
