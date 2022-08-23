@@ -1,23 +1,32 @@
-    // push an object inside a new array:::
+// push an object inside a new array:::
     const cartArry = [];
 
- function display(cartPlayer){
+function display(cartPlayer){
      console.log(cartPlayer);
      const playerBody = document.getElementById('cart-products');
      playerBody.innerHTML = '';
+
      for(let i = 0; i < cartPlayer.length; i++){
          // const name = cartArry[i].innerText;
          // console.log(cartPlayer[i].playerName);
-         const name = cartArry[i].playerName
+         const name = cartArry[i].playerName;
+        
+        if(i < 5 ){
+            console.log('ok');   
+        }
+        else{
+            alert('You can select only 5 players.');
+            break;
+        }
 
 
-         const tr = document.createElement('tr')
+       const tr = document.createElement('tr')
          tr.innerHTML = `
          <th>${i + 1}</th>
          <td>${name}</td>          
          `;
-         playerBody.appendChild(tr);
-
+        playerBody.appendChild(tr);
+       
       }
 
     }
